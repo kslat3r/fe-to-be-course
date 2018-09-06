@@ -55,6 +55,7 @@ const setup = (config) => {
 
   const handleError = err => {
     console.error(err);
+
     process.exit(1);
   };
 
