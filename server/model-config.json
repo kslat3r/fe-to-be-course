@@ -16,9 +16,5 @@
   "User": {
     "dataSource": "users",
     "public": true
-  },
-  "Todo": {
-    "dataSource": "todos",
-    "public": true
   }
 }

@@ -15,7 +15,6 @@ describe('models/user.js', () => {
 
   it('should bind the correct methods', () => {
     expect(typeof model.list).to.equal('function');
-    expect(typeof model.get).to.equal('function');
   });
 
   it('list should return the correct response', async () => {
@@ -33,51 +32,20 @@ describe('models/user.js', () => {
     sinon.stub(userService, 'list')
       .callsFake(() => Promise.resolve(users));
 
-    const todos = [
-      {
-        userId: 1,
-        text: 'Write my mocks',
-        completed: false
-      },
-      {
-        userId: 2,
-        text: 'Write my comments',
-        completed: false
-      }
-    ];
-
-    sinon.stub(todoService, 'list')
-      .callsFake(() => todos);
-
     const output = await model.list();
 
     expect(output).to.deep.equal([
       {
         id: 1,
-        name: 'Ed',
-        todos: [
-          {
-            userId: 1,
-            text: 'Write my mocks',
-            completed: false
-          }
-        ]
+        name: 'Ed'
       },
       {
         id: 2,
-        name: 'Lokesh',
-        todos: [
-          {
-            userId: 2,
-            text: 'Write my comments',
-            completed: false
-          }
-        ]
+        name: 'Lokesh'
       }
     ]);
 
     userService.list.restore();
-    todoService.list.restore();
   });
 
   it('list should throw an error if user service throws an error', async () => {
