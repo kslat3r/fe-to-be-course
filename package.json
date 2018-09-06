@@ -1,7 +1,8 @@
 {
-  "name": "mocha-chai-supertest-hackathon-api",
+  "name": "fe-to-be-course",
   "version": "1.0.0",
-  "description": "Hackathon API",
+  "description": "FE to BE course material",
+  "repository": "https://github.com/kslat3r/fe-to-be-course",
   "main": "server/server.js",
   "scripts": {
     "start": "node .",
