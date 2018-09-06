@@ -1,0 +1,138 @@
+[{
+  "request": {
+    "method": "GET",
+    "path": "/standing-order-service-requests/12345",
+    "headers": {
+      "x-lbg-brand":"LYDS",
+      "x-lbg-channel":"RC",
+      "x-lbg-txn-correlation-id":"test",
+      "x-lbg-client-id":"12345",
+      "x-lbg-client-app-name":"PISP",
+      "x-lbg-ob-tpp-ssa-id":"lbg-ob-tpp-ssa-id",
+      "x-lbg-ob-tpp-org-id":"lbg-ob-tpp-org-id"
+    }
+  },
+  "response": {
+    "statusCode": 200,
+    "headers":{
+      "Content-Type": "application/json;charset=UTF-8"
+    },
+    "body": {
+      "Data": {
+        "StandingOrderServiceRequestId": "308bd666-2f6c-4f22-b8d8-188616746da7",
+        "Permissions": [
+          "CreateStandingOrder"
+        ],
+        "CreationDateTime": "test",
+        "StatusUpdateDateTime": "test",
+        "Status": "Authorised",
+        "StandingOrder": {
+          "Frequency": "EvryDay",
+          "Reference": "string",
+          "FirstPaymentDateTime": "2018-04-19T10:28:44.734Z",
+          "FirstPaymentAmount": {
+            "Amount": "5.00",
+            "Currency": "GBP"
+          },
+          "NextPaymentDateTime": "2018-04-19T10:28:44.734Z",
+          "NextPaymentAmount": {
+            "Amount": "5.00",
+            "Currency": "GBP"
+          },
+          "FinalPaymentDateTime": "2018-04-19T10:28:44.734Z",
+          "FinalPaymentAmount": {
+            "Amount": "5.00",
+            "Currency": "GBP"
+          },
+          "DebtorAgent": {
+            "SchemeName": "BICFI",
+            "Identification": "string"
+          },
+          "DebtorAccount": {
+            "SchemeName": "IBAN",
+            "Identification": "2222222222222222222222",
+            "Name": "string",
+            "SecondaryIdentification": "string"
+          },
+          "CreditorAgent": {
+            "SchemeName": "BICFI",
+            "Identification": "string"
+          },
+          "CreditorAccount": {
+            "SchemeName": "IBAN",
+            "Identification": "2222222222222222222222",
+            "Name": "string",
+            "SecondaryIdentification": "string"
+          }
+        }
+      },
+      "Risk": {
+        "PaymentContextCode": "BillPayment",
+        "MerchantCategoryCode": "APC",
+        "MerchantCustomerIdentification": "string",
+        "DeliveryAddress": {
+          "AddressLine": [
+            "string"
+          ],
+          "StreetName": "string",
+          "BuildingNumber": "string",
+          "PostCode": "string",
+          "TownName": "string",
+          "CountrySubDivision": [
+            "string"
+          ],
+          "Country": "EU"
+        }
+      }
+    }
+  }
+},{
+  "request": {
+    "method": "GET",
+    "path": "/standing-order-service-requests/0012345",
+    "headers": {
+      "x-lbg-brand":"LYDS",
+      "x-lbg-channel":"RC",
+      "x-lbg-txn-correlation-id":"test",
+      "x-lbg-client-id":"12345",
+      "x-lbg-client-app-name":"PISP",
+      "x-lbg-ob-tpp-ssa-id":"lbg-ob-tpp-ssa-id",
+      "x-lbg-ob-tpp-org-id":"lbg-ob-tpp-org-id"
+    }
+  },
+  "response": {
+    "statusCode": 200,
+    "headers":{
+      "Content-Type": "application/json;charset=UTF-8"
+    },
+    "body": {
+      "Data": {
+        "StandingOrderServiceRequestId": "308bd666-2f6c-4f22-b8d8-188616746da7",
+        "Permissions": [
+          "CreateStandingOrder"
+        ],
+        "CreationDateTime": "test",
+        "StatusUpdateDateTime": "test",
+        "Status": "AwaitingAuthorisation"
+      },
+      "Risk": {
+        "PaymentContextCode": "BillPayment",
+        "MerchantCategoryCode": "APC",
+        "MerchantCustomerIdentification": "string",
+        "DeliveryAddress": {
+          "AddressLine": [
+            "string"
+          ],
+          "StreetName": "string",
+          "BuildingNumber": "string",
+          "PostCode": "string",
+          "TownName": "string",
+          "CountrySubDivision": [
+            "string"
+          ],
+          "Country": "EU"
+        }
+      }
+    }
+  }
+}]

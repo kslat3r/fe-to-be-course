@@ -1,0 +1,61 @@
+[{
+  "request": {
+    "method": "GET",
+    "path": "/standing-order-service-requests/12345",
+    "headers": {
+      "x-lbg-brand":"LYDS",
+      "x-lbg-channel":"RC",
+      "x-lbg-txn-correlation-id":"test",
+      "x-lbg-client-id":"12345",
+      "x-lbg-client-app-name":"PISP",
+      "x-lbg-ob-tpp-ssa-id":"lbg-ob-tpp-ssa-id",
+      "x-lbg-ob-tpp-org-id":"lbg-ob-tpp-org-id"
+    }
+  },
+  "response": {
+    "statusCode": 404,
+    "headers":{
+      "Content-Type": "application/json;charset=UTF-8"
+    }
+  }
+},{
+  "request": {
+    "method": "GET",
+    "path": "/standing-order-service-requests/00123451",
+    "headers": {
+      "x-lbg-brand":"LYDS",
+      "x-lbg-channel":"RC",
+      "x-lbg-txn-correlation-id":"test",
+      "x-lbg-client-id":"12345",
+      "x-lbg-client-app-name":"PISP",
+      "x-lbg-ob-tpp-ssa-id":"lbg-ob-tpp-ssa-id",
+      "x-lbg-ob-tpp-org-id":"lbg-ob-tpp-org-id"
+    }
+  },
+  "response": {
+    "statusCode": 400,
+    "headers":{
+      "Content-Type": "application/json;charset=UTF-8"
+    }
+  }
+},{
+  "request": {
+    "method": "GET",
+    "path": "/standing-order-service-requests/00123452",
+    "headers": {
+      "x-lbg-brand":"LYDS",
+      "x-lbg-channel":"RC",
+      "x-lbg-txn-correlation-id":"test",
+      "x-lbg-client-id":"12345",
+      "x-lbg-client-app-name":"PISP",
+      "x-lbg-ob-tpp-ssa-id":"lbg-ob-tpp-ssa-id",
+      "x-lbg-ob-tpp-org-id":"lbg-ob-tpp-org-id"
+    }
+  },
+  "response": {
+    "statusCode": 503,
+    "headers":{
+      "Content-Type": "application/json;charset=UTF-8"
+    }
+  }
+}]

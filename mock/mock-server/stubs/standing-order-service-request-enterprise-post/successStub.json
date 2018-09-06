@@ -1,0 +1,180 @@
+[
+  {
+    "request": {
+      "method": "POST",
+      "path": "/standing-order-service-requests",
+      "headers": {
+        "x-lbg-brand": "LYDS",
+        "x-lbg-channel": "RC",
+        "x-lbg-txn-correlation-id": "test",
+        "x-lbg-client-id": "test",
+        "x-lbg-client-app-name": "test",
+        "x-lbg-ob-tpp-ssa-id": "test",
+        "x-lbg-ob-tpp-org-id": "test"
+      }
+    },
+    "response": {
+      "statusCode": 200,
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "body": {
+        "Data": {
+          "StandingOrderServiceRequestId": "308bd666-2f6c-4f22-b8d8-188616746da7",
+          "Permissions": [
+            "CreateStandingOrder"
+          ],
+          "CreationDateTime": "test",
+          "StatusUpdateDateTime": "test",
+          "Status": "AwaitingAuthorisation",
+          "StandingOrder": {
+            "Frequency": "EvryDay",
+            "Reference": "string",
+            "FirstPaymentDateTime": "2028-04-01T23:00:00.000Z",
+            "FirstPaymentAmount": {
+              "Amount": "5.00",
+              "Currency": "GBP"
+            },
+            "NextPaymentDateTime": "2028-04-01T23:00:00.000Z",
+            "NextPaymentAmount": {
+              "Amount": "5.00",
+              "Currency": "GBP"
+            },
+            "FinalPaymentDateTime": "2028-04-01T23:00:00.000Z",
+            "FinalPaymentAmount": {
+              "Amount": "5.00",
+              "Currency": "GBP"
+            },
+            "DebtorAgent": {
+              "SchemeName": "BICFI",
+              "Identification": "string"
+            },
+            "DebtorAccount": {
+              "SchemeName": "IBAN",
+              "Identification": "2222222222222222222222",
+              "Name": "string",
+              "SecondaryIdentification": "string"
+            },
+            "CreditorAgent": {
+              "SchemeName": "BICFI",
+              "Identification": "string"
+            },
+            "CreditorAccount": {
+              "SchemeName": "IBAN",
+              "Identification": "2222222222222222222222",
+              "Name": "string",
+              "SecondaryIdentification": "string"
+            }
+          }
+        },
+        "Risk": {
+          "PaymentContextCode": "BillPayment",
+          "MerchantCategoryCode": "APC",
+          "MerchantCustomerIdentification": "string",
+          "DeliveryAddress": {
+            "AddressLine": [
+              "string"
+            ],
+            "StreetName": "string",
+            "BuildingNumber": "string",
+            "PostCode": "string",
+            "TownName": "string",
+            "CountrySubDivision": [
+              "string"
+            ],
+            "Country": "EU"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "POST",
+      "path": "/standing-order-service-requests",
+      "headers": {
+        "x-lbg-brand": "LYDS",
+        "x-lbg-channel": "RC",
+        "x-lbg-txn-correlation-id": "intent-error",
+        "x-lbg-client-id": "test",
+        "x-lbg-client-app-name": "test",
+        "x-lbg-ob-tpp-ssa-id": "test",
+        "x-lbg-ob-tpp-org-id": "test"
+      }
+    },
+    "response": {
+      "statusCode": 200,
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "body": {
+        "Data": {
+          "StandingOrderServiceRequestId": "308bd666-2f6c-4f22-b8d8-188616746da7",
+          "Permissions": [
+            "CreateStandingOrder"
+          ],
+          "CreationDateTime": "test",
+          "StatusUpdateDateTime": "test",
+          "Status": "AwaitingAuthorisation",
+          "StandingOrder": {
+            "Frequency": "EvryDay",
+            "Reference": "string",
+            "FirstPaymentDateTime": "2028-04-01T23:00:00.000Z",
+            "FirstPaymentAmount": {
+              "Amount": "5.00",
+              "Currency": "GBP"
+            },
+            "NextPaymentDateTime": "2028-04-01T23:00:00.000Z",
+            "NextPaymentAmount": {
+              "Amount": "5.00",
+              "Currency": "GBP"
+            },
+            "FinalPaymentDateTime": "2028-04-01T23:00:00.000Z",
+            "FinalPaymentAmount": {
+              "Amount": "5.00",
+              "Currency": "GBP"
+            },
+            "DebtorAgent": {
+              "SchemeName": "BICFI",
+              "Identification": "string"
+            },
+            "DebtorAccount": {
+              "SchemeName": "IBAN",
+              "Identification": "2222222222222222222222",
+              "Name": "string",
+              "SecondaryIdentification": "string"
+            },
+            "CreditorAgent": {
+              "SchemeName": "BICFI",
+              "Identification": "string"
+            },
+            "CreditorAccount": {
+              "SchemeName": "IBAN",
+              "Identification": "2222222222222222222222",
+              "Name": "string",
+              "SecondaryIdentification": "string"
+            }
+          }
+        },
+        "Risk": {
+          "PaymentContextCode": "BillPayment",
+          "MerchantCategoryCode": "APC",
+          "MerchantCustomerIdentification": "string",
+          "DeliveryAddress": {
+            "AddressLine": [
+              "string"
+            ],
+            "StreetName": "string",
+            "BuildingNumber": "string",
+            "PostCode": "string",
+            "TownName": "string",
+            "CountrySubDivision": [
+              "string"
+            ],
+            "Country": "EU"
+          }
+        }
+      }
+    }
+  }
+]

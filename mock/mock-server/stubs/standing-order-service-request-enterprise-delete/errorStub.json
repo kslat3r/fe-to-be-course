@@ -1,0 +1,12 @@
+{
+  "request": {
+    "method": "DELETE",
+    "path": "/standing-order-service-requests/11234567"
+  },
+  "response": {
+    "statusCode": 404,
+    "headers":{
+      "Content-Type": "application/json;charset=UTF-8"
+    }
+  }
+}
