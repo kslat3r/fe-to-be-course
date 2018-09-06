@@ -17,24 +17,10 @@ describe('services/user.js', () => {
     ];
 
     sinon.stub(server.dataSources.users, 'listDS')
-      .callsFake(() => stub);
+      .callsFake(() => Promise.resolve(stub));
 
     const users = await userService.list();
 
     expect(users).to.deep.equal(stub);
-  });
-
-  it('get should return correct response', async () => {
-    const stub = {
-      id: 1,
-      name: 'Ed'
-    };
-
-    sinon.stub(server.dataSources.users, 'getDS')
-      .callsFake(() => stub);
-
-    const user = await userService.get(1);
-
-    expect(user).to.deep.equal(stub);
   });
 });

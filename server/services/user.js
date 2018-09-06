@@ -1,15 +1,7 @@
 const api = require('../api');
+const getCircuitBreaker = require('../helpers/get-circuit-breaker');
 
 module.exports = {
-  list: () => {
-    return api.dataSources.users.listDS();
-  },
-
-  get: (...args) => {
-    const [
-      userId
-    ] = args;
-
-    return api.dataSources.users.getDS(userId);
-  }
+  list: () => getCircuitBreaker('user-list')
+    .execute(api.dataSources.users, 'listDS', [])
 };
