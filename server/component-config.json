@@ -1,4 +1,7 @@
 {
+  "./components/request-validation": {
+    "path": "definitions/api.yaml"
+  },
   "loopback-component-explorer": {
     "mountPath": "/explorer"
   }

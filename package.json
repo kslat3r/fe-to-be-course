@@ -28,7 +28,9 @@
     "loopback-component-explorer": "4.2.0",
     "loopback-connector-rest": "2.1.0",
     "rxjs": "^6.3.2",
-    "strong-error-handler": "2.1.0"
+    "strong-error-handler": "2.1.0",
+    "swagger-tools": "^0.10.4",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "chai": "4.1.2",
