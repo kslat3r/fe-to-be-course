@@ -9,18 +9,7 @@
         },
         "template": {
           "method": "GET",
-          "url": "https://jsonplaceholder.typicode.com/users"
-        }
-      },
-      {
-        "functions": {
-          "getDS": [
-            "userId"
-          ]
-        },
-        "template": {
-          "method": "GET",
-          "url": "https://jsonplaceholder.typicode.com/users/{userId}"
+          "url": "http://mock:1080/users"
         }
       }
     ]
