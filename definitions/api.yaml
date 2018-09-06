@@ -16,6 +16,10 @@ paths:
       responses:
         '200':
           description: Successful response contains an array of users
+          headers:
+            uptime:
+              type: string
+              description: Server uptime
           schema:
             $ref: '#/responses/Users'
 responses:

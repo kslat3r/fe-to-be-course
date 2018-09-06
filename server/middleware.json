@@ -33,7 +33,9 @@
   "session": {},
   "auth": {},
   "parse": {},
-  "routes:before": {},
+  "routes:before": {
+    "./middleware/uptime": {}
+  },
   "routes": {
     "loopback#rest": {
       "paths": [

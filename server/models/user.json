@@ -85,7 +85,22 @@
   "acls": [],
   "methods": {
     "list": {
-      "accepts": [],
+      "accepts": [
+        {
+          "arg": "req",
+          "type": "object",
+          "http": {
+            "source": "req"
+          }
+        },
+        {
+          "arg": "res",
+          "type": "object",
+          "http": {
+            "source": "res"
+          }
+        }
+      ],
       "returns": [
         {
           "arg": "body",

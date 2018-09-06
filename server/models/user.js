@@ -1,11 +1,17 @@
 const userService = require('../services/user');
 
 module.exports = (User) => {
-  User.list = async () => {
+  User.list = async (req, res) => {
+    let response;
+
     try {
-      return await userService.list();
+      response = await userService.list();
     } catch (err) {
       throw err;
     }
+
+    res.header('uptime', req.uptime);
+
+    return response;
   };
 };

@@ -10,6 +10,8 @@ describe('GET /api/users', () => {
       .expect(200)
       .end((error, response) => {
         expect(error).to.equal(null);
+
+        expect(parseInt(response.headers.uptime, 10) > 0).to.equal(true);
         expect(response.body).to.deep.equal(expectedResponse);
 
         return done();
