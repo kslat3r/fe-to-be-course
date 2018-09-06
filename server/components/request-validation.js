@@ -6,15 +6,9 @@ const spec = swaggerTools.specs.v2;
 module.exports = (app, opts) => {
   const swagger = YAML.load(path.resolve(opts.path));
 
-  spec.validate(swagger, (err) => {
-    if (err) {
-      console.log(err);
+  spec.validate(swagger, () => {});
 
-      process.exit();
-    }
-  });
-
-  swaggerTools
+  return swaggerTools
     .initializeMiddleware(swagger, (middleware) => {
       app.middleware('routes:before', middleware.swaggerMetadata());
       app.middleware('routes:before', middleware.swaggerValidator());
