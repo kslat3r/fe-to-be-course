@@ -1,0 +1,48 @@
+{
+  "todos": {
+    "crud": true,
+    "connector": "rest",
+    "operations": [
+      {
+        "functions": {
+          "listDS": [
+            "userId"
+          ]
+        },
+        "template": {
+          "method": "GET",
+          "url": "https://jsonplaceholder.typicode.com/todos",
+          "query": {
+            "userId": "{userId}"
+          }
+        }
+      }
+    ]
+  },
+  "users": {
+    "crud": true,
+    "connector": "rest",
+    "operations": [
+      {
+        "functions": {
+          "listDS": []
+        },
+        "template": {
+          "method": "GET",
+          "url": "https://jsonplaceholder.typicode.com/users"
+        }
+      },
+      {
+        "functions": {
+          "getDS": [
+            "userId"
+          ]
+        },
+        "template": {
+          "method": "GET",
+          "url": "https://jsonplaceholder.typicode.com/users/{userId}"
+        }
+      }
+    ]
+  }
+}
