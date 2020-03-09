@@ -1,6 +1,6 @@
 const sinon = require('sinon');
 const { expect } = require('chai');
-const server = require('../server');
+const request = require('request-promise');
 const userService = require('./user');
 
 describe('services/user.js', () => {
@@ -16,7 +16,7 @@ describe('services/user.js', () => {
       }
     ];
 
-    sinon.stub(server.dataSources.users, 'listDS')
+    sinon.stub(request, 'get')
       .callsFake(() => Promise.resolve(stub));
 
     const users = await userService.list();

@@ -1,0 +1,103 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-03-09T17:25:05.370Z",
+    "end": "2020-03-09T17:25:05.501Z",
+    "duration": 131,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d8c5ee6b-d514-4c1b-a537-c1c418f068f7",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5bf61008-f71d-4773-9f6a-ede0d5664de8",
+          "title": "GET /api/users",
+          "fullFile": "/Users/kslat3r/Projects/newline/fe-to-be-course/express-v4.16.1/test/user-list.spec.js",
+          "file": "/test/user-list.spec.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return the correct response if downstream system returns response",
+              "fullTitle": "GET /api/users should return the correct response if downstream system returns response",
+              "timedOut": false,
+              "duration": 0,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "supertest(server)\n  .get('/api/users')\n  .expect(200)\n  .end((error, response) => {\n    console.log(response.body);\n    expect(error).to.equal(null);\n    // expect(parseInt(response.headers.uptime, 10) > 0).to.equal(true);\n    expect(response.body).to.deep.equal(expectedResponse);\n    return done();\n  });",
+              "err": {
+                "message": "AssertionError: expected {} to deeply equal [ Array(10) ]",
+                "estack": "AssertionError: expected {} to deeply equal [ Array(10) ]\n    at Proxy.assertEqual (node_modules/chai/lib/chai/core/assertions.js:1020:19)\n    at Proxy.methodWrapper (node_modules/chai/lib/chai/utils/addMethod.js:57:25)\n    at Test.<anonymous> (test/user-list.spec.js:16:39)\n    at Test.assert (node_modules/supertest/lib/test.js:179:6)\n    at Server.assert (node_modules/supertest/lib/test.js:131:12)\n    at emitCloseNT (net.js:1645:8)\n    at processTicksAndRejections (internal/process/task_queues.js:79:21)",
+                "diff": null
+              },
+              "uuid": "a11fa4e5-efe6-4c91-baa2-19eb09674867",
+              "parentUUID": "5bf61008-f71d-4773-9f6a-ede0d5664de8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a11fa4e5-efe6-4c91-baa2-19eb09674867"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 100000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 100000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.0.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mocha-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {},
+      "version": "4.1.0"
+    }
+  }
+}

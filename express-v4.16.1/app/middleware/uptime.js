@@ -1,7 +1,5 @@
-module.exports = () => {
-  return (req, res, next) => {
-    req.uptime = process.uptime();
+module.exports = (req, res, next) => {
+  req.app.locals.uptime = process.uptime();
 
-    next();
-  };
+  next();
 };
