@@ -1,0 +1,19 @@
+version: "2"
+
+services:
+  # api:
+  #   build: ./
+  #   volumes:
+  #     - .:/usr/src/app
+  #     - /usr/src/app/node_modules
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - mock
+
+  mock:
+    image: jamesdbloom/mockserver:mockserver-3.11
+    environment:
+      - JVM_OPTIONS=-Dmockserver.enableCORSForAPI=false
+    ports:
+      - '1080:1080'

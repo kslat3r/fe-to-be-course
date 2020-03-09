@@ -3,12 +3,61 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./app/bin/www",
+    "setup-mocks": "node ./mock/setup.js",
+    "format": "semistandard --env mocha --fix",
+    "pretest": "npm run format",
+    "test": "npm run test:coverage npm run test:unit",
+    "test:coverage": "nyc",
+    "test:unit": "mocha --exit './app/**/*.spec.js'",
+    "test:component": "cross-env MOCHAWESOME_REPORTDIR=./test/reports MOCHAWESOME_REPORTFILENAME=mocha-report mocha --exit --timeout 100000 --reporter mochawesome './test/**/*.spec.js'"
   },
   "dependencies": {
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "hystrixjs": "^0.2.0",
+    "morgan": "~1.9.1",
+    "swagger-tools": "^0.10.4",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "chai": "4.1.2",
+    "cross-env": "^5.1.6",
+    "eslint": "^6.8.0",
+    "eslint-config-semistandard": "12.0.0",
+    "eslint-config-standard": "11.0.0-beta.0",
+    "mocha": "5.0.0",
+    "mochawesome": "^5.0.0",
+    "mockserver-client": "^5.3.0",
+    "nyc": "^14.1.1",
+    "semistandard": "^14.2.0",
+    "sinon": "4.3.0",
+    "supertest": "3.0.0"
+  },
+  "nyc": {
+    "include": [
+      "app/**/*.js"
+    ],
+    "exclude": [
+      "app/**/*.spec.js",
+      "app/bin/*.js",
+      "app/index.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text",
+      "text-summary"
+    ],
+    "check-coverage": true,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100
+  },
+  "semistandard": {
+    "ignore": [
+      "test/reports"
+    ]
   }
 }

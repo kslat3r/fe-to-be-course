@@ -1,0 +1,82 @@
+swagger: '2.0'
+info:
+  title: FE to BE course material
+  version: v1.0.0
+basePath: /api
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /users:
+    get:
+      summary: Get all the users and their todos
+      responses:
+        '200':
+          description: Successful response contains an array of users
+          headers:
+            uptime:
+              type: string
+              description: Server uptime
+          schema:
+            $ref: '#/responses/Users'
+responses:
+  Users:
+    description: Users response
+    schema:
+      $ref: '#/definitions/Users'
+definitions:
+  Users:
+    type: array
+    items:
+      $ref: '#/definitions/User'
+  User:
+    type: object
+    properties:
+      id:
+        type: number
+      name:
+        type: string
+      username:
+        type: string
+      email:
+        type: string
+      address:
+        $ref: '#/definitions/Address'
+      phone:
+        type: string
+      website:
+        type: string
+      company:
+        $ref: '#/definitions/Company'
+  Address:
+    type: object
+    properties:
+      street:
+        type: string
+      suite:
+        type: string
+      city:
+        type: string
+      zipcode:
+        type: string
+      geo:
+        $ref: '#/definitions/Geo'
+  Geo:
+    type: object
+    properties:
+      lat:
+        type: string
+      lng:
+        type: string
+  Company:
+    type: object
+    properties:
+      name:
+        type: string
+      catchPhrase:
+        type: string
+      bs:
+        type: string
