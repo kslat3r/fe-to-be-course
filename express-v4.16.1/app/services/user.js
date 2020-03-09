@@ -4,5 +4,5 @@ const { USERS_API_URI } = process.env;
 
 module.exports = {
   list: () => getCircuitBreaker('user-list')
-    .execute(request, 'get', [USERS_API_URI])
+    .execute(request, 'get', [USERS_API_URI, { json: true }])
 };

@@ -15,7 +15,7 @@ router.get('/users', async (req, res, next) => {
   }
 
   res.set({ uptime: req.app.locals.uptime });
-  res.send(users);
+  res.json(users);
 });
 
 module.exports = router;

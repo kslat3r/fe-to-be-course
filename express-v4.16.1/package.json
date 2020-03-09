@@ -7,7 +7,7 @@
     "setup-mocks": "node ./mock/setup.js",
     "format": "semistandard --env mocha --fix",
     "pretest": "npm run format",
-    "test": "npm run test:coverage npm run test:unit",
+    "test": "npm run test:coverage npm run test:unit && npm run test:component",
     "test:coverage": "nyc",
     "test:unit": "mocha --exit './app/**/*.spec.js'",
     "test:component": "cross-env MOCHAWESOME_REPORTDIR=./test/reports MOCHAWESOME_REPORTFILENAME=mocha-report mocha --exit --timeout 100000 --reporter mochawesome './test/**/*.spec.js'"
