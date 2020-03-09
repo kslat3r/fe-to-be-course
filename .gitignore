@@ -17,6 +17,6 @@ log.*
 logs/*.log.*
 report-*.json
 
-test/reports/*.json
-test/reports/*.html
-test/reports/assets
+**/test/reports/*.json
+**/test/reports/*.html
+**/test/reports/assets
